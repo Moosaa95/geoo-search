@@ -91,3 +91,14 @@ form .btn:hover {
     background: var(--darkred);
     transform: scale(1.1);
 }
+
+ul {
+    list-style: none;
+    color: var(--text__light);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
