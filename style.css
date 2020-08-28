@@ -56,6 +56,7 @@ form {
     flex-direction: column;
     align-items: center;
     position: relative;
+    width: 100%;
 }
 
 .btn,
@@ -101,4 +102,10 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+.msg {
+    background: red;
+    display: block;
+    color: #fff;
 }
