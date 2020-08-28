@@ -33,25 +33,30 @@
 
 
     <section class="section--one" id="weatherConditions">
-        <ul class="cities">
-            <li class="city-conditions">
-                <h2 class="city-name" data-name="${name},${sys.country},${wind.speed}">
-                    <span>Abuja</span>
-                    <sup>NG</sup>
-                    <sup>wind-speed: 4km/hr</sup>
-                    <sup>humidity:89%</sup>
-                </h2>
-                <div class="city-temp">27<sup>°C</sup></div>
-                <figure>
-                    <img class="city-icon" src="img/Status-weather-clouds-icon.png" alt="">
-                    <figcaption>hot day ahead</figcaption>
-                </figure>
-            </li>
-        </ul>
+        <div class="cities">
+            <div class="city-conditions">
 
-        <div class="location">
-            <p>-</p>
+                <!-- data-name="name,sys.country,main.humidity,wind.speed" -->
+                <div class="city-name">
+                    <div class="weather-arrangement">
+                        <span class="city-Location" data-name></span>
+                        <div class="weather-icon">
+                            <img class="imgData" src="img/unknown.png" alt="">
+                        </div>
+                    </div>
+                    <sup class="country-name" data-country></sup>
+                    <sup class="wind-speed"></sup>
+                    <sup class="humidity"></sup>
+                </div>
+                <div class="city-temp" data-temperature><sup></sup></div>
+
+                <div class="temperature-description"></div>
+            </div>
         </div>
+
+        <!--  <div class="location">
+            <p>-</p>
+        </div> -->
     </section>
     <script src="app.js"></script>
 </body>
