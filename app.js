@@ -4,9 +4,9 @@ const qsAll = (prop) => document.querySelectorAll(prop)
 const [form, input, list, msg, locate, cityTemp] = [qs('form'), qs('input'), qs('.cities'), qs('.msg'), qs("[data-locate]"), qs('.city-temp')]
 
 
-//const weather = {}
+const weather = {}
 
-//weather.unit = ["celsius"]
+weather.unit = ["celsius"]
 
 
 
@@ -71,18 +71,21 @@ form.addEventListener('submit', e => {
 
                 }
                 dataCityTemp.addEventListener('click', function() {
-                    const tempSup = qs('.city-temp sup')
-                    if (tempSup.textContent === "°C") {
+                    //const tempSup = qs('.city-temp sup')
 
-                        let fahrenheit = celsiusToFahr(Math.round(main.temp))
+                    //if (tempSup.textContent === "°C") {
+                    if (weather.unit == 'celsius') {
+                        let fahrenheit = celsiusToFahr(main.temp)
                         fahrenheit = Math.floor(fahrenheit)
                         dataCityTemp.innerHTML = `${fahrenheit}<sup>°F</sup>`
+                        weather.unit = "fahrenheit"
 
 
 
                     } else {
 
                         dataCityTemp.innerHTML = `${Math.round(main.temp)}<sup>°C</sup>`
+                        weather.unit = 'celsius'
                     }
 
                 })
@@ -103,8 +106,9 @@ form.addEventListener('submit', e => {
 
 
     } else {
-
+        form.reset()
         msg.textContent = "Please check your internet connection"
+
     }
 
 
