@@ -55,6 +55,7 @@
     border-radius: 30px;
     color: var(--text__dark);
     background: var(--orange);
+    cursor: pointer;
 }
 
 .section--one .temperature-description,
