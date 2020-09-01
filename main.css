@@ -36,12 +36,6 @@
     background: var(--text__light);
 }
 
-.section--one figcaption {
-    margin-top: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
 .section--one .city-temp {
     font-size: 5rem;
     font-weight: bold;
@@ -59,7 +53,7 @@
     font-size: .5em;
     padding: 0.2em 0.6em;
     border-radius: 30px;
-    color: var(--text__light);
+    color: var(--text__dark);
     background: var(--orange);
 }
 

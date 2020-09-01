@@ -4,6 +4,11 @@ const qsAll = (prop) => document.querySelectorAll(prop)
 const [form, input, list, msg, locate, cityTemp] = [qs('form'), qs('input'), qs('.cities'), qs('.msg'), qs("[data-locate]"), qs('.city-temp')]
 
 
+//const weather = {}
+
+//weather.unit = ["celsius"]
+
+
 
 //section dom 
 
@@ -13,7 +18,7 @@ const windSpeed = qs('.wind-speed')
 const humidity = qs('.humidity')
 const tempDesc = qs('.temperature-description')
 const iconDiv = qs('[data-icon]')
-const dataCityTemp = qs('[data-temperature]')
+const dataCityTemp = qs('.city-temp')
 const dataImage = qs('.imgData')
 const weatherIcon = qs('.weather-icon')
 
@@ -40,19 +45,47 @@ form.addEventListener('submit', e => {
 
                 const { main, name, sys, weather, wind } = data
 
-                const dataName = qs(`.city-name[data-name="${name},${sys.country}, ${main.humidity}, ${wind.speed}"]`)
-                console.log(dataName);
                 const icon = `https://openweathermap.org/img/wn/${
                 weather[0]["icon"]
               }@2x.png`
-                locationOne.innerHTML = `${name}`
 
+
+                locationOne.innerHTML = `${name}`
                 countryName.innerHTML = `${sys.country}`
                 humidity.innerHTML = `humdity:${main.humidity} %`
                 windSpeed.innerHTML = `wind-speed:${wind.speed} km/hr`
                 dataCityTemp.innerHTML = `${Math.round(main.temp)}<sup>°C</sup>`
                 weatherIcon.innerHTML = `<img src="${icon}"/>`
                 tempDesc.innerHTML = `${weather[0]["description"]}`
+
+
+
+
+
+
+
+
+                //function to convert celsius to fahrenheit
+                function celsiusToFahr(temperature) {
+                    return (temperature * 9 / 5) + 32
+
+                }
+                dataCityTemp.addEventListener('click', function() {
+                    const tempSup = qs('.city-temp sup')
+                    if (tempSup.textContent === "°C") {
+
+                        let fahrenheit = celsiusToFahr(Math.round(main.temp))
+                        fahrenheit = Math.floor(fahrenheit)
+                        dataCityTemp.innerHTML = `${fahrenheit}<sup>°F</sup>`
+
+
+
+                    } else {
+
+                        dataCityTemp.innerHTML = `${Math.round(main.temp)}<sup>°C</sup>`
+                    }
+
+                })
 
             })
 
@@ -73,6 +106,8 @@ form.addEventListener('submit', e => {
 
         msg.textContent = "Please check your internet connection"
     }
+
+
 
 
 
