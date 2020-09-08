@@ -150,4 +150,8 @@
     .section--one .city-conditions .city-name sup {
         font-size: 1.5rem;
     }
+    .fb-share-button {
+        position: absolute;
+        top: 30%;
+    }
 }
