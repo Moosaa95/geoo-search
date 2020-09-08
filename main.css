@@ -1,18 +1,26 @@
 .section--one {
     margin: 20px 0px 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
 }
 
 .map--container {
-    width: 47%;
-    height: 40vh;
-    margin: 4rem 0 0 -4em;
+    position: absolute;
+    top: -190px;
+    width: 100%;
+    height: 50vh;
+    margin: 4rem 0 0 -1em;
     visibility: hidden;
+    padding: 20px 20px;
 }
 
 .city-conditions {
     position: relative;
-    left: 60%;
-    padding: 10px 10px;
+    height: 50vh;
+    top: -150px;
+    left: 0%;
+    padding: 20px 20px;
     border-radius: 20px;
     background: var(--text__light);
     color: var(--text__med);
@@ -80,6 +88,11 @@
     justify-content: space-between;
 }
 
+.fb-share-button {
+    position: absolute;
+    top: 30%;
+}
+
 @media screen and (min-width:500px) {
     .heading {
         font-size: 3rem;
@@ -113,11 +126,23 @@
         align-items: center;
         position: absolute;
         top: 40%;
-        right: 30%;
+        right: 20%;
+    }
+    .city-conditions {
+        position: relative;
+        height: 50vh;
+        top: 50px;
+        left: 0%;
+        padding: 20px 20px;
+        border-radius: 20px;
+        background: var(--text__light);
+        color: var(--text__med);
     }
     .map--container {
         position: absolute;
         left: 10%;
+        width: 50%;
+        top: 40%;
     }
     .section--one .city-conditions sup {
         font-size: 3rem;
