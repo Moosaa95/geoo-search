@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no" />
 
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
@@ -45,8 +46,8 @@
     <div class="fb-share-button" data-href="https://moosaa95.github.io/geo-search/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmoosaa95.github.io%2Fgeo-search%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
 
     <section class="section--one" id="weatherConditions">
-        <div id="map" class="map--container">
-
+        <div class="map--container">
+            <div id="map"></div>
         </div>
         <div class="cities">
             <div class="city-conditions">
@@ -54,18 +55,19 @@
                 <!-- data-name="name,sys.country,main.humidity,wind.speed" -->
                 <div class="city-name">
                     <div class="weather-arrangement">
-                        <span class="city-Location" data-name></span>
+                        <span class="city-Location" data-name>Abuja</span>
                         <div class="weather-icon">
-                            <img class="imgData" src="img/unknown.png" alt="">
+                            <!-- <img class="imgData" src="img/unknown.png" alt=""> -->
+                            <img class="imgData" src="img/Status-weather-clear-icon.png" alt="">
                         </div>
                     </div>
-                    <sup class="country-name" data-country></sup>
-                    <sup class="wind-speed"></sup>
-                    <sup class="humidity"></sup>
+                    <sup class="country-name" data-country>NG</sup>
+                    <sup class="wind-speed">40</sup>
+                    <sup class="humidity">2</sup>
                 </div>
-                <div class="city-temp" data-temperature></div>
+                <div class="city-temp" data-temperature>39'0</div>
 
-                <div class="temperature-description"></div>
+                <div class="temperature-description">clear skies</div>
             </div>
         </div>
 

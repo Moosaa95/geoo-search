@@ -1,0 +1,22 @@
+{
+  "name": "geo-search",
+  "version": "1.0.0",
+  "description": "Gulp file",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moosaa95/geoo-search.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "moosaabdullahi45@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Moosaa95/geoo-search/issues"
+  },
+  "homepage": "https://github.com/Moosaa95/geoo-search#readme"
+}

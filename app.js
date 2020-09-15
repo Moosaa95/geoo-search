@@ -1,7 +1,7 @@
 const qs = (prop) => document.querySelector(prop)
 const qsAll = (prop) => document.querySelectorAll(prop)
 
-const [form, input, list, msg, locate, cityTemp] = [qs('form'), qs('input'), qs('.cities'), qs('.msg'), qs("[data-locate]"), qs('.city-temp')]
+const [form, input, msg, locate, cityTemp] = [qs('form'), qs('input'), qs('.msg'), qs("[data-locate]"), qs('.city-temp')]
 
 
 const weather = {}
